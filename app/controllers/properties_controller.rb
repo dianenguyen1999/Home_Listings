@@ -25,7 +25,7 @@ class PropertiesController < ApplicationController
   # POST /properties.json
   def create
     @property = Property.new(property_params)
-    @property,account_id = current_account.id
+    @property.account_id = current_account.id
 
     respond_to do |format|
       if @property.save
@@ -70,6 +70,6 @@ class PropertiesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def property_params
-      params.require(:property).permit(:name, :address, :price, :rooms, :bathroom)
+      params.require(:property).permit(:name, :address, :price, :rooms, :bathroom, :photo, :photo_cache)
     end
 end
