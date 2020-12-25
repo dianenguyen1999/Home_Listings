@@ -21,7 +21,7 @@ gem 'jbuilder', '~> 2.7'
 gem "devise"
 
 #uploads to amazon s3
-gem 'carrierwave', "0.10.0"
+gem 'carrierwave', '~> 2.0'
 gem 'fog', '~> 1.37.0'
 
 # image resizing
